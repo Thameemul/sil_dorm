@@ -1,0 +1,9 @@
+D:\Sil Dormitory\Tools>ecgen def "Data Source=JAMES-PC;Initial Catalog=Dormitory;Persist Security Info=True;User ID=sa;Password=ecgroup123"
+
+
+			<ContextName>DormitoryContext</ContextName>
+			<ContextPath>..\EC.Framework.Data.Implementation\UnitOfWorks</ContextPath>
+			<EntitiesPath>..\EC.Framework.Data.Entities\Generated</EntitiesPath>
+			<Namespace>EC.Framework.Data.Entities</Namespace>
+
+D:\Sil Dormitory\Tools>ecgen gen DormitoryContext.xml

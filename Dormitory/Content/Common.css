@@ -1,0 +1,1203 @@
+﻿
+.siteBackColor
+{
+    background-color: #276FA3;
+}
+
+.ForeColorwhite
+{
+	color:White;
+}
+
+.border
+{
+	border-right: #276FA3 thin solid;
+	border-top: #276FA3 thin solid;
+	border-left: #276FA3 thin solid;
+	border-bottom: #276FA3 thin solid;
+	/*width: 994px;*/
+	background-color: white;
+}
+
+.fontSize12pt
+{
+    font-size:12pt;
+}
+.fontSize13pt
+{
+    font-size:15pt;
+}
+.siteContentBackcolor
+{
+    color:#276FA3;
+}
+.siteContentForecolor
+{
+    color:#276FA3;
+}
+.foreColorWhite
+{
+    color:White;
+}
+
+.tamil
+{
+    font-family:senthamil;
+}
+.siteDarkForeColor
+{
+font-family: Verdana,helvetica,sans-serif;
+color: #ff6700;
+}
+.BookAntiqua
+{
+    font-family: Book Antiqua;
+    font-size: 14pt;
+}
+
+.foreColorDefinision
+{
+    color:#006600;
+}
+
+.foreColorGreen
+{
+    color:Green;
+}
+
+.foreColorRed
+{
+    color:Red;
+}
+
+.foreColorExampleHead
+{
+    color:#FF00FF;
+}
+
+.foreColorExampleList
+{
+    color:#0033CC;
+}
+
+.siteBGLowColor
+{
+    background-color: #F6E3CE;
+}
+
+.siteBGMediumColor
+{
+    background-color: #F7BE81;
+}
+
+.siteBGDarkColor
+{
+    background-color: #ff6700;
+}
+
+.siteForeLowColor
+{
+    color: #F6E3CE;
+}
+
+.siteForeMediumColor
+{
+    color: #F7BE81;
+}
+
+.siteForeDarkColor
+{
+    color: #ff6700;
+}
+
+.textBoxAppearance
+{
+    background: url("../images/SiteImages/input-search2.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 8px 5px;
+    border: 0;
+    margin: 5px 3px 5px 10px;
+    font-size: 14px;
+    font-family: "Myriad Pro";
+    color: #ff6700;
+}
+
+.disableColor
+{
+    background-color: #D8D8D8;
+}
+.hand
+{
+    cursor:pointer;
+    cursor: hand;
+}
+
+.DecorationNone
+{
+    text-decoration:none;
+}
+
+.right
+{
+  width:100%;
+  height:70px;
+  background: url(../images/logo_top_back.gif) repeat-x 0px 0px;
+}
+
+.right0
+{
+  float: right;
+  background-color: #f9f9f9;
+  border-left: #cde5fa thin solid;
+  background-image: url(../images/content_blue_bg.jpg);
+  background-repeat: repeat-x;
+}
+
+
+.pageTableHeadBorderColor
+{
+border-color:#276FA3;
+}
+
+.pageHeadRow
+{
+    background-color: #276FA3;
+    font-family: Verdana,helvetica,sans-serif;
+	font-size: 10pt;
+	font-weight:bold;
+	color:White;
+}
+
+.borderBottomWhite1px
+{
+	border-bottom: 1px solid white;
+}
+
+.borderRightWhite1px
+{
+	border-right: 1px solid white;
+}
+
+.pageSearchRow
+{
+    background-color:#D8E4E6;
+}
+
+.pageSearchTdBorder
+{
+    border-bottom:1px solid #ffad00;
+}
+
+.pageNewCaptionTdBorder
+{
+    border-left:1px solid #276FA3;
+}
+.pageNewTdBorder
+{
+    border-left:1px solid #ffad00;
+    border-bottom:1px solid #ffad00;
+}
+
+.rightAlign
+{
+	text-align:right;
+}
+
+.leftAlign
+{
+	text-align:left;
+}
+
+.centerAlign
+{
+	text-align:center;
+}
+
+.topAlign
+{
+    vertical-align: top;
+}
+
+.middleAlign
+{
+    vertical-align: middle;
+}
+
+.readOnlyTextBox
+{
+    font-weight:bold;
+    background-color:#f9f9f9;
+}
+.gridItems
+{
+    color:black;
+    background-color:#F6E3CE;
+    
+}
+.gridHeader, .gridHeader a, .gridHeader a:link, .gridHeader a:active, 
+	.gridHeader a:visited, .gridHeader a:hover
+{
+	color: white;
+	background-color:#276FA3;
+	font-size:9pt;
+	font-weight: bold;
+	text-align:center;
+	/*text-decoration:none;
+	cursor: hand;*/
+	height:20px;
+}
+
+.itemStyleBorderColor
+{
+     ItemStyle-BorderColor:"DarkBlue";
+}
+
+.toolbar
+{
+	font-size: 10px;
+	font-family: Verdana;
+	padding: 4px; /* filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#ffffff,endColorStr=lightblue); */
+	text-align: left;
+	font-weight: bold;
+	color: darkblue;
+	background-color: lightblue;
+	background-color: rgba(180, 200, 233, 1.6); /* FF3+, Saf3+, Opera 10.10+, Chrome */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr= '#ffffff' ,EndColorStr= 'lightblue' ); /* IE6,IE7 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff',EndColorStr='lightblue')"; /* IE8 */
+}
+
+.zeroPosition
+{
+	position:absolute;top:0px;left:0px;
+}
+
+.zeroLeftPosition
+{
+	position:absolute;left:-2px;top:79px;
+}
+.dashboard_title_blue
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-image: url(../images/HeaderImages/ceospeak_bg.gif);
+}
+
+.Header_title
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.Page_title
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: White;
+}
+
+.HeaderTable
+{
+	border-right: #cde5fa thin solid;
+	border-top: #cde5fa thin solid;
+	border-left: #cde5fa thin solid;
+	border-bottom: #cde5fa thin solid;
+	text-align: center;
+	/*width: 994px;*/
+	background-color: white;
+}
+
+.TableBorder
+{
+	border-right: #276FA3 thin solid;
+	border-top: #276FA3 thin solid;
+	border-left: #276FA3 thin solid;
+	border-bottom: #276FA3 thin solid;
+	/*width: 994px;*/
+	background-color: white;
+}
+
+.DiaryTableBorder
+{
+	/*border-right: #ffad00 thin solid;
+	border-top: #ffad00 thin solid;
+	border-left: #ffad00 thin solid;
+	border-bottom: #ffad00 thin solid;
+	width: 994px;*/
+	background-color: #276FA3;
+}
+
+.HeaderRightBorder
+{
+	border-right: White thin solid;
+}
+
+.ContentDivider
+{
+	width: 100%;
+	margin-top: 0px;
+	background-color: #f9f9f9;
+	border-left: #cde5fa thin solid;
+	text-align: left;
+	vertical-align: top;
+	background-image: url(../images/HeaderImages/content_blue_bg.jpg);
+	background-repeat: repeat-x;
+}
+
+
+
+
+.SubHeaderTitle
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 8.5pt;
+	font-weight: bold;
+	color: darkBlue;
+}
+
+.HeaderTitle
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: darkBlue;
+}
+
+.MyCalendar .ajax__calendar_container
+{
+	border: 5px solid #cde5fa;
+	background-color: White;
+	color: red;
+}
+
+.MyCalendar .ajax__calendar_body .ajax__calendar_day
+{
+	color:red;
+}
+
+.MyCalendar .ajax__calendar_other .ajax__calendar_day, .MyCalendar .ajax__calendar_other .ajax__calendar_year
+{
+	color: black;
+}
+.MyCalendar .ajax__calendar_hover .ajax__calendar_day, .MyCalendar .ajax__calendar_hover .ajax__calendar_month, .MyCalendar .ajax__calendar_hover .ajax__calendar_year
+{
+	color: red;
+}
+.MyCalendar .ajax__calendar_active .ajax__calendar_day, .MyCalendar .ajax__calendar_active .ajax__calendar_month, .MyCalendar .ajax__calendar_active .ajax__calendar_year
+{
+	color: red;
+	font-weight: bold;
+}
+
+.MaskedEditFocus
+{
+	background-color: #ffffcc;
+	color: #000000;
+}
+.MaskedEditMessage
+{
+	color: #ff0000;
+	font-weight: bold;
+}
+.MaskedEditError
+{
+	background-color: #ffcccc;
+}
+
+.SuggestionCaption
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 8pt;
+	text-decoration: none;
+	color: Blue;
+	text-align:left;
+}
+
+.ErrorCaption
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	text-decoration: none;
+	color: Red;
+	text-align:left;
+}
+
+.Caption
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	text-decoration: none;
+	color: #276FA3;
+	/*text-align:left;*/
+}
+
+.Text
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 8pt;
+	margin-top: 0px;
+	border-color:#ff6700;
+	border-width:thin;
+}
+
+.ForeColorwhite8pt
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 8pt;
+	color:White;
+}
+
+.siteContentFont8pt
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 8pt;
+}
+
+.ForeColorwhite10pt
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 10pt;
+	font-weight:bold;
+	color:White;
+}
+
+.ForeColorRibbon10pt
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 10pt;
+	font-weight:bold;
+	color:#ffad00;
+}
+
+.ForeColorRibbon12pt
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 12pt;
+	font-weight:bold;
+	color:#ffad00;
+}
+.ForeColorRibbon14pt
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 14pt;
+	font-weight:bold;
+	color:#ffad00;
+}
+.ForeColorRibbon8pt
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 8pt;
+	color:#ffad00;
+}
+
+.ForeColor10pt
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 10pt;
+}
+
+.ForeColor8pt
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 8pt;
+}
+
+.ANoDcoration
+{
+    text-decoration:none;
+
+}
+a:hover
+{
+    /*font-weight:bold;*/
+}
+.ItalicBlue
+{
+    font-style: italic;
+    color: Blue;
+}
+.AWhiteNoDcoration
+{
+    text-decoration:none;
+    color:White;
+}
+.ForeColorwhite12pt
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 12pt;
+	font-weight:bold;
+	color:White;
+}
+
+.ForeColorwhite18pt
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 18pt;
+	font-weight:bold;
+	color:White;
+}
+
+.ForeColorRed22pt
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 22pt;
+	font-weight:bold;
+	color:Red;
+}
+
+.ForeColorwhite6pt
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 6pt;
+	font-weight:bold;
+	color:White;
+}
+.BackColorBlue
+{
+	 background-color : #004089;
+}
+.BackColorGreen
+{
+	 background-color : #006600;
+}
+.BackColorRed
+{
+	 background-color : #ff0000;
+}
+.BackColorGrey
+{
+	 background-color : #a9a9a9;
+}
+.BackColorGold
+{
+	 background-color : #daa520;
+}
+
+.DiaryDate
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 24pt;
+	margin-top: 0px;
+}
+
+.DiaryYear
+{
+	font-family: Verdana,helvetica,sans-serif;
+	font-size: 24pt;
+	margin-top: 0px;
+	color: #f9f9f9;
+}
+
+.Combo
+{
+	background-color: white;
+	border: 1px #000000 solid;
+	font-size: 8pt;
+	font-family: Verdana,helvetica,sans-serif;
+}
+
+.footer
+{
+	background-color:#E6E4E4;
+	color:Black;
+	font-family: Verdana,helvetica,sans-serif;
+	font-size:7pt;
+}
+.siteBGColor
+{
+    background-color: #F7BE81;
+}
+.siteSecondBackColor
+{
+	    background-color: #e5e5e5;
+
+}
+
+.sample1
+{
+	    background-color: #BFD4F1;
+}
+
+.sample2
+{
+	    background-color: #CEDFF7;
+}
+
+.tdMouseOver
+{
+	font-weight: bold;
+}
+
+.tdMouseOut
+{
+	font-weight:normal;
+}
+
+
+.siteRibbonBGColor
+{
+    background-color: #276FA3;
+}
+
+.tdBorderBottomWhite
+{
+    border-bottom-color:#ffad00;
+    border-bottom-style:inset;
+}
+
+.tdBorderBottomRibbonBlue
+{
+    border-bottom-color:#ffad00;
+    border-bottom-style:inset;
+}
+   
+.tdBorderSolidDark
+{
+    border: 1px;
+    border-left-color:#276FA3;
+    border-left-style:solid;
+    border-right-color:#276FA3;
+    border-right-style:solid;   
+    border-bottom-color:#276FA3;
+    border-bottom-style:solid;      
+}
+
+                    
+.siteContentBGColor
+{
+    background-color:#f9f9f9;
+}
+
+.siteForeColor
+{
+    color:#1B96EE;
+}
+
+.fontBold
+{
+    font-weight:bold;
+}
+
+.fontItalic
+{
+    font-style:italic;
+}
+
+.textDecorationUnderline
+{
+    text-decoration:underline;
+}
+
+.title18pt
+{
+    font-family: Verdana,helvetica,sans-serif;
+    font-size: 18pt;
+    font-weight:bold;
+}
+
+.title15pt
+{
+    font-family: Verdana,helvetica,sans-serif;
+    font-size: 15pt;
+    font-weight:bold;
+}
+
+.title12pt
+{
+    font-family: Verdana,helvetica,sans-serif;
+    font-size: 12pt;
+    font-weight:bold;
+}
+
+.title10pt
+{
+    font-family: Verdana,helvetica,sans-serif;
+    font-size: 10pt;
+    font-weight:bold;
+}
+
+.modalBackground
+{
+    background-color:Gray;
+    filter:alpha(opacity=10);
+    opacity:0.1;
+}
+
+.modalPopup
+{
+    background-color:red;
+    border-width:3px;
+    border-style:solid;
+    border-color:Gray;
+    padding:3px;
+    width:250px;
+}
+
+.tdMenu
+{
+    font-family: Verdana,helvetica,sans-serif;
+    font-size: 8pt;
+    font-weight:bold;
+    background-color:#ffad00;
+    color:White;
+}
+
+.tdMenuSelected
+{
+    font-family: Verdana,helvetica,sans-serif;
+    font-size: 8pt;
+    font-weight:bold;
+    background-color:#cad9e3;
+    color:#ffad00;
+}
+
+.aMenu
+{
+    color:White;
+    text-decoration:none;
+}
+
+.aMenuSelected
+{
+    color:#ffad00;
+    text-decoration:none;
+}
+
+.borderColorWhite
+{
+    border-right-color:White;
+    border-right-style:inset;
+}
+
+.borderColorBlue1
+{
+    border: 1px solid #ffad00;
+    border-style: solid;
+}
+
+.borderColorBlue
+{
+    border-bottom: 1px solid gray;
+}
+
+.borderBottomRightColorBlue
+{
+    border-bottom: 1px solid #ffad00;
+    border-right: 1px solid #ffad00;
+}
+
+.ForeColorDark
+{
+    color:#235898;
+}
+
+.BackColorDarkBlue
+{
+    background-color:#ff6700;
+}
+
+.BackColorDarkGreen
+{
+    background-color:darkgreen;
+}
+
+
+.mandatoryFields
+{
+    font-family: Verdana,helvetica,sans-serif;
+    font-size: 8pt;
+    font-weight:bold;
+    color:#ffad00;
+}
+
+.mandatoryStar
+{
+    font-family: Verdana,helvetica,sans-serif;
+    font-size: 8pt;
+    color:red;
+}
+
+.collapsePanelHeader
+{
+	width: 100%;
+	height: 22px;
+	color: #3366CC;
+	background-color:#ffad00;
+	font-weight: bold;
+	float: left;
+	padding: 0px;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+
+.collapsePanel
+{
+	width: 100%;
+	height: 0px;
+	text-align: left;
+	background-color: White;
+	float: left;
+	overflow: hidden;
+}
+
+
+.toolbar
+{
+	font-size: 10pt;
+	font-family: Verdana,helvetica,sans-serif;
+	padding: 1px; /* filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#ffffff,endColorStr=lightblue); */
+	text-align: left;
+	background-color: lightblue;
+	background-color: rgba(180, 200, 233, 1.6); /* FF3+, Saf3+, Opera 10.10+, Chrome */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr= '#ffffff' ,EndColorStr= 'lightblue' ); /* IE6,IE7 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffad00',EndColorStr='#ffad00')"; /* IE8 */
+}
+
+  .staticMenuItem 
+        { 
+            color:White; 
+  
+            border:solid 1px black; 
+            padding:2px 4px; 
+        } 
+        .menuHover 
+        { 
+            color:#69afd6; 
+            background-color:blue; 
+        } 
+        .dmenuHover 
+        { 
+            color:blue; 
+            background-color:#ff9900; 
+        } 
+        .dynamicMenuItem 
+        { 
+            color:black; 
+            background-color:#FF6600; 
+            padding:2px 4px;        
+        } 
+        .dynamicMenu 
+        { 
+            background-color: #ffcc00;             
+            border:Solid 1px black; 
+            filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=5, OffY=5, Color='gray', Positive='true')"; 
+        } 
+
+        .staticMenuItem 
+        { 
+            color:White; 
+  
+            border:solid 1px black; 
+            padding:2px 4px; 
+        } 
+        .menuHover 
+        { 
+            color:#ffcc00; 
+            background-color:#ffad00; 
+        } 
+        .dmenuHover 
+        { 
+            color:blue; 
+            background-color:#ff9900; 
+        } 
+        .dynamicMenuItem 
+        { 
+            color:black; 
+            /*background-color:#FF6600;*/ 
+            padding:2px 4px;        
+        } 
+        .dynamicMenu 
+        { 
+            /*the background color for the dynamic menus both "popout" and non is covered by the 
+            DynamicMenuStyle-BackColor="#FF6600" in the <asp:Menu> tag*/ 
+            /*background-color: #ffcc00;*/ 
+            /*background-color: green;*/             
+            border:Solid 1px black; 
+            filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=5, OffY=5, Color='gray', Positive='true')" ; 
+        } 
+        
+/*Modal Popup*/
+.modalBackground {
+	background-color:lightblue;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+
+}
+
+.modalPopup {
+	background-color:#ffad00;
+	border-width:3px;
+	border-style:solid;
+	border-color:darkblue;
+	padding:1px;
+	width:250px;
+}
+
+.modalPopup p {
+    padding: 5px;
+}        
+
+.alternatingRowStyle
+{
+    background-color:#f3f3f3;
+}
+
+.alternatingDiaryRowStyle
+{
+    background-color:White;
+}
+
+.normalColor
+{
+    color:Black;
+}
+
+.sundayColor
+{
+    color:Red;
+}
+
+.saturdayColor
+{
+    color:Blue;
+}
+
+.repeaterItemRowStyle
+{
+    background-color:#C1DEE3;
+}
+
+.repeaterAlternatingItemRowStyle
+{
+    background-color:white;
+    border-color: darkblue;
+}
+
+.rowStyle
+{
+    background-color:#F6E3CE;
+}
+
+.rowHeight
+{
+    height:30px;
+}
+
+.pageTitle
+{
+    border-color:#ffad00;
+    border:1px;
+}
+
+.jqueryslidemenu{
+font: bold 12px Verdana;
+background: #ffad00;
+width: 100%;
+}
+
+.jqueryslidemenu ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+/*Top level list items*/
+.jqueryslidemenu ul li{
+position: relative;
+display: inline;
+float: left;
+}
+
+/*Top level menu link items style*/
+.jqueryslidemenu ul li a{
+display: block;
+background: #ffad00; /*background of tabs (default state)*/
+color: white;
+padding: 5px 6px;
+border-right: 1px solid white;
+color: #2d2b2b;
+text-decoration: none;
+}
+
+* html .jqueryslidemenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
+display: inline-block;
+}
+
+.jqueryslidemenu ul li a:link, .jqueryslidemenu ul li a:visited{
+color: white;
+}
+
+.jqueryslidemenu ul li a:hover{
+background: #ff6700; /*tab link background during hover state*/
+color: white;
+}
+	
+/*1st sub level menu*/
+.jqueryslidemenu ul li ul{
+position: absolute;
+left: 0;
+display: block;
+visibility: hidden;
+}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.jqueryslidemenu ul li ul li{
+display: list-item;
+float: none;
+}
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.jqueryslidemenu ul li ul li ul{
+top: 0;
+}
+
+/* Sub level menu links style */
+.jqueryslidemenu ul li ul li a{
+font: normal 13px Verdana;
+width: 160px; /*width of sub menus*/
+padding: 4px;
+margin: 0;
+border-top-width: 0;
+border-bottom: 1px solid #2d2b2b;
+}
+
+.jqueryslidemenuz ul li ul li a:hover{ /*sub menus hover style*/
+background: skyblue;
+color: black;
+}
+
+/* ######### CSS classes applied to down and right arrow images  ######### */
+
+.downarrowclass{
+position: absolute;
+top: 9px;
+right: 7px;
+}
+
+.rightarrowclass{
+position: absolute;
+top: 8px;
+right: 5px;
+}
+
+
+.panel
+{
+margin:0px;
+padding:5px;
+display:none;
+}
+    .rTable {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+
+    .rborder {
+        border: 1px solid #999;
+        float: left;
+        width: 100%;
+    }
+
+    .rTableBody, .rTableRow {
+        color: #276FA3;
+        clear: both;
+        font-size: 8pt;
+    }
+
+    .rTableHead, .rTableFoot {
+        background-color: #DDD;
+        font-weight: bold;
+        font-size: 10pt;
+    }
+
+    .rTableCell, .rTableHead {
+        color: #276FA3;
+        overflow: hidden;
+        border-bottom: 1px solid #999;
+    }
+
+    .rTable:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+    .rTableHead .rTableRow {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+     /*@media only screen and (max-width: 1000px) {
+
+	.rTableCell:before {
+	    content: attr(data-title);
+	    font-weight: bold;
+	    padding-right: 5px;
+        }
+    .rTableHead {
+        visibility: hidden;
+        position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        .rTableRow {
+            clear: both;
+        }
+}*/
+
+@media only screen and (max-width: 800px) {
+    /*.rTable,
+    .rTableHead,
+    .rTableBody,
+    .rTableHead,
+    .rTableCell,
+    .rTableRow {
+        display: block;
+    }*/
+
+        /* Hide table headers (but not display: none;, for accessibility) */
+        /*.rTableHead .rTableRow {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }*/
+
+    /*.rTableRow {
+        border: 1px solid #ccc;
+    }*/
+
+    /*.rTableCell {
+                border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+
+        white-space: normal;
+        text-align: left;
+    }*/
+
+        /*.rTableCell:before {
+             Now like a table header 
+            position: absolute;
+            Top/left values mimic padding
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            text-align: left;
+            font-weight: bold;
+        }*/
+}

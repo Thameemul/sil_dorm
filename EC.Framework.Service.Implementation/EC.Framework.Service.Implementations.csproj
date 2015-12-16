@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA030E50-1434-4F93-9F65-EF32880A6D2B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EC.Framework.Service.Implementations</RootNamespace>
+    <AssemblyName>EC.Framework.Service.Implementations</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressService.cs" />
+    <Compile Include="AutomapperConfig.cs" />
+    <Compile Include="CartService.cs" />
+    <Compile Include="EnquiryService.cs" />
+    <Compile Include="BookingService.cs" />
+    <Compile Include="CityService.cs" />
+    <Compile Include="CommonService.cs" />
+    <Compile Include="RoomTypeService.cs" />
+    <Compile Include="RoomService.cs" />
+    <Compile Include="CountryService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StateService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EC.Framework.Common.Entities\EC.Framework.Common.Entities.csproj">
+      <Project>{56fd62bd-dcd9-4b6e-a5a2-b907555ff9ed}</Project>
+      <Name>EC.Framework.Common.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EC.Framework.Common.Lib\EC.Framework.Common.Lib.csproj">
+      <Project>{0013ad80-5815-4030-8314-5bb6f604087a}</Project>
+      <Name>EC.Framework.Common.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EC.Framework.Data.Entities\EC.Framework.Data.Entities.csproj">
+      <Project>{0a414af0-b206-4dd8-bb25-19b475b658fa}</Project>
+      <Name>EC.Framework.Data.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EC.Framework.Data.Implementation\EC.Framework.Data.Implementations.csproj">
+      <Project>{bfb60ae8-7445-42e2-956b-1ab4523fc401}</Project>
+      <Name>EC.Framework.Data.Implementations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EC.Framework.Service.Contracts\EC.Framework.Service.Contracts.csproj">
+      <Project>{9497d70e-1ddd-47b7-8282-934fa0ea9e19}</Project>
+      <Name>EC.Framework.Service.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EC.Framework.Service.Entities\EC.Framework.Service.Entities.csproj">
+      <Project>{9ef05d4d-6b11-4217-8720-07fcc4b94e60}</Project>
+      <Name>EC.Framework.Service.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EC.Framework\EC.Framework.Data.Contracts.csproj">
+      <Project>{6f7afbd8-fa73-4069-92e7-3e7b480e7178}</Project>
+      <Name>EC.Framework.Data.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

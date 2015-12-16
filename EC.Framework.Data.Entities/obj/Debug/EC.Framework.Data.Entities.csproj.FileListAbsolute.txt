@@ -1,0 +1,19 @@
+D:\Sil Dormitory\EC.Framework.Data.Entities\bin\Debug\EC.Framework.Data.Entities.dll
+D:\Sil Dormitory\EC.Framework.Data.Entities\bin\Debug\EC.Framework.Data.Entities.pdb
+D:\Sil Dormitory\EC.Framework.Data.Entities\obj\Debug\EC.Framework.Data.Entities.dll
+D:\Sil Dormitory\EC.Framework.Data.Entities\obj\Debug\EC.Framework.Data.Entities.pdb
+D:\Sil Dormitory\EC.Framework.Data.Entities\obj\Debug\EC.Framework.Data.Entities.csprojResolveAssemblyReference.cache
+E:\ECGroupProjects\Sil Dormitory\Sil Dormitory\EC.Framework.Data.Entities\bin\Debug\EC.Framework.Data.Entities.dll
+E:\ECGroupProjects\Sil Dormitory\Sil Dormitory\EC.Framework.Data.Entities\bin\Debug\EC.Framework.Data.Entities.pdb
+E:\ECGroupProjects\Sil Dormitory\Sil Dormitory\EC.Framework.Data.Entities\obj\Debug\EC.Framework.Data.Entities.dll
+E:\ECGroupProjects\Sil Dormitory\Sil Dormitory\EC.Framework.Data.Entities\obj\Debug\EC.Framework.Data.Entities.pdb
+C:\Users\Thameem\Desktop\Sil Dormitory\Sil Dormitory\EC.Framework.Data.Entities\bin\Debug\EC.Framework.Data.Entities.dll
+C:\Users\Thameem\Desktop\Sil Dormitory\Sil Dormitory\EC.Framework.Data.Entities\bin\Debug\EC.Framework.Data.Entities.pdb
+C:\Users\Thameem\Desktop\Sil Dormitory\Sil Dormitory\EC.Framework.Data.Entities\obj\Debug\EC.Framework.Data.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Thameem\Desktop\Sil Dormitory\Sil Dormitory\EC.Framework.Data.Entities\obj\Debug\EC.Framework.Data.Entities.dll
+C:\Users\Thameem\Desktop\Sil Dormitory\Sil Dormitory\EC.Framework.Data.Entities\obj\Debug\EC.Framework.Data.Entities.pdb
+C:\Users\Thameem\Desktop\Sil Dormitory\EC.Framework.Data.Entities\bin\Debug\EC.Framework.Data.Entities.dll
+C:\Users\Thameem\Desktop\Sil Dormitory\EC.Framework.Data.Entities\bin\Debug\EC.Framework.Data.Entities.pdb
+C:\Users\Thameem\Desktop\Sil Dormitory\EC.Framework.Data.Entities\obj\Debug\EC.Framework.Data.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Thameem\Desktop\Sil Dormitory\EC.Framework.Data.Entities\obj\Debug\EC.Framework.Data.Entities.dll
+C:\Users\Thameem\Desktop\Sil Dormitory\EC.Framework.Data.Entities\obj\Debug\EC.Framework.Data.Entities.pdb

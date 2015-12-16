@@ -1,0 +1,93 @@
+﻿@model Dormitory.ViewModels.BookingVM
+@{
+  ViewBag.Title = "Booking";
+}
+
+<fieldset>
+  <legend>Booking</legend>
+  @using (@Html.BeginForm())
+  {
+    @Html.ValidationSummary()
+    <div class="form-inline" style="padding:20px 0">
+      <div class="form-group">
+        <label for="FromDate">From date:</label>
+        @Html.TextBoxFor(m => m.FromDate, new { @class = "form-control", type = "date", data_value = Model.FromDate.ToString("yyyy-MM-dd") })
+      </div>
+      <div class="form-group">
+        <label for="ToDate">To date:</label>
+        @Html.TextBoxFor(m => m.ToDate, new { @class = "form-control", type = "date", data_value = Model.ToDate.ToString("yyyy-MM-dd") })
+      </div>
+      <div class="form-group">
+        <label for="roomtype">Room Type:</label>
+        @Html.DropDownListFor(m => m.RoomTypeId, new SelectList(Model.RoomTypes, "RoomTypeId", "RoomTypeName", Model.RoomTypeId), new { id = "RoomType", @class = "form-control" })
+      </div>
+      <div class="form-group">
+        <label for="rommno">Room No:</label>
+        @Html.DropDownList("RoomId", new SelectList(Model.Rooms, "RoomId", "RoomNo"), new { id = "RoomId", @class = "form-control" })
+      </div>
+      <button id="btnSubmit" type="submit" class="btn btn-default">Submit</button>
+    </div>
+  }
+  <div style="padding:20px 0">
+    <table class="table table-bordered" id="tblAvailableDates">
+      <thead>
+        <tr>
+          <th class="col-xs-2"> @Html.CheckBox("SelectAll")  Select All</th>
+          <th class="col-xs-2">Date</th>
+          <th class="col-xs-2">No. of Person</th>
+        </tr>
+      </thead>
+      @foreach (var row in Model.Rows)
+      {
+        foreach (var item in row.Value)
+        {
+          var _item = item.Value as Object[];
+          var RoomStatus = _item[0].ToString();
+          var RemainingCapacity = Convert.ToInt32(_item[1]);
+          var rowClass = "";
+          switch (RoomStatus)
+          {
+            case "Available":
+              rowClass = "";
+              break;
+            case "Partial Booked":
+              rowClass = "bg-warning";
+              break;
+            case "Booked":
+            case "Not Available":
+              rowClass = "bg-danger";
+              break;
+            default:
+              break;
+          }
+          <tr class="@rowClass">
+            <td class="col-xs-2">
+              @if (RoomStatus == "Available" || RoomStatus == "Partial Booked")
+              {
+                @Html.CheckBox("chkDate", new { data_date = item.Key })
+              }
+              else
+              {
+                @Html.CheckBox("chkDate", new { disabled = "disabled", data_date = item.Key })
+              }
+            </td>
+            <td class="col-xs-2">@item.Key</td>
+            <td class="col-xs-8">
+              @if (RoomStatus == "Available" || RoomStatus == "Partial Booked")
+              {
+                @Html.DropDownList("ddl", new SelectList(Enumerable.Range(1, RemainingCapacity)), new { data_date = item.Key })
+              }
+            </td>
+          </tr>
+        }
+      }
+    </table>
+
+  </div>
+  <div class="text-center">
+    <button id="btnAddCart" class="btn btn-default btn-lg" data-cartid='@Model.CartId'>Add to Cart</button>
+    <button id="btnViewEnquiry" class="btn btn-default btn-lg" onclick="location.href='@Url.Action("Enquiry", "Enquiry")'">View Enquiry</button>
+    <button id="btnViewCart" class="btn btn-default btn-lg">View Cart <span class="badge">@Model.TotalDates</span></button>
+  </div>
+</fieldset>
+<script src="~/Scripts/Booking/Booking.js"></script>

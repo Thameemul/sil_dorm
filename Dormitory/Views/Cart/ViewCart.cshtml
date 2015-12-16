@@ -1,0 +1,84 @@
+﻿@model Dormitory.ViewModels.CartVM
+@{
+  ViewBag.Title = "Cart";
+  Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (@Html.BeginForm())
+{
+  @Html.ValidationSummary()
+  <fieldset>
+    <legend>View Cart & Confirm</legend>
+    <div style="margin:20px 0;max-height:500px; overflow-y:auto; ">
+      <table class="table table-bordered table-striped" id="tblViewCart">
+        <thead>
+          <tr>
+            <th>Room No</th>
+            <th>Date</th>
+            <th>Room Rent</th>
+            <th>Occupancy</th>
+            <th>Food</th>
+            <th>Total</th>
+            <th></th>
+          </tr>
+        </thead>
+        @{ decimal TotalAmount = 0; }
+        @foreach (var item in Model.CartDetails)
+        {
+          var TotalRent = item.RoomRent + item.Food;
+          TotalAmount += TotalRent;
+          <tr data-cartdetailid="@item.CartDetailID">
+            <td class="col-xs-2 ">@item.RoomNo</td>
+            <td class="col-xs-2 ">@item.Date.ToString("MM/dd/yyyy")</td>
+            <td class="col-xs-2 ">@item.RoomRent</td>
+            <td class="col-xs-2 ">@item.Occupancy</td>
+            <td class="col-xs-2 ">@item.Food</td>
+            <td class="col-xs-2 ">@TotalRent</td>
+            <td class="text-center text" ><a title="Click here to remove the date from cart." class="text-danger" data-cartdetailid="@item.CartDetailID" href="javascript:alert('test')" ><i class="fa fa-trash"></i></a> </td>
+          </tr>
+        }
+        <tr>
+          <td class="text-right" colspan="5"><b>Total:</b></td>
+          <td colspan="2"><b>@TotalAmount</b></td>
+        </tr>
+      </table>
+    </div>
+
+    <fieldset>
+      <legend><h4>Customer Information</h4></legend>
+      <div class="form-horizontal">
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Name</label>
+          <div class="col-xs-4">
+            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+            @*<input class="form-control" id="Name" type="text" />*@
+          </div>
+          <div class="col-xs-4">
+            <button id="btnAddOccupants" type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Address", "Address")'">Add Occupants</button>          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Contact No.</label>
+          <div class="col-xs-4">
+            @Html.TextBoxFor(x => x.ContactNo, new { @class = "form-control" })
+            @*<input class="form-control" id="ContactNo" type="text" />*@
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">E-Mail ID</label>
+          <div class="col-xs-4">
+            @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+           @*<input class="form-control" id="Email" type="text" />*@
+          </div>
+        </div>
+
+      </div>
+      <div class="text-center">
+        <button id="btnMoreBooking" type="button" title="Back to Cart" onclick="location.href='@Url.Action("Booking", "Booking")'" class="btn btn-default btn-lg">More Booking</button>
+        <button id="btnConfirm" type="submit" class="btn btn-default btn-lg">Confirm</button>
+      </div>
+    </fieldset>
+  </fieldset>
+
+}
+<script src="~/Scripts/Cart/Cart.js"></script>

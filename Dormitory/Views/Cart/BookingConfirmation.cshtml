@@ -1,0 +1,64 @@
+﻿@model Dormitory.ViewModels.BookingConfirmationVM
+@{
+  ViewBag.Title = "Booking Confirmation";
+}
+<fieldset class="hidden-print">
+  <legend class="hidden-print">Booking Confirmation</legend>
+</fieldset>
+
+<div class="form-inline">
+  <table class="table table-bordered">
+    <tr>
+      <td colspan="6"><b>Booking #:</b> @Model.Booking.BookingId </td>
+    </tr>
+    <tr>
+      <td colspan="6"><b>Booked On:</b> @Model.Booking.BookedOn.ToString("MM/dd/yyyy") </td>
+    </tr>
+    <tr>
+      <td colspan="6" class="text-center"><b>Booking Details</b></td>
+    </tr>
+    <tr>
+      <td><b>Room No</b></td>
+      <td><b>Date</b></td>
+      <td><b>Room Rent</b></td>
+      <td><b>Occupancy</b></td>
+      <td><b>Food</b></td>
+      <td><b>Total</b></td>
+    </tr>
+    @{ decimal TotalAmount = 0; }
+    @foreach (var item in Model.Booking.RoomBookingDetails)
+      {
+        var TotalRent = item.RoomRent + item.Food;
+        TotalAmount += TotalRent;
+      <tr>
+        <td>@item.RoomNo</td>
+        <td>@item.Date.ToString("MM/dd/yyyy")</td>
+        <td>@item.RoomRent</td>
+        <td>@item.Occupancy</td>
+        <td>@item.Food</td>
+        <td>@TotalRent</td>
+      </tr>
+
+      }
+    <tr>
+      <td class="text-right" colspan="5"><b>Total:</b></td>
+      <td><b>@TotalAmount</b></td>
+    </tr>
+    <tr>
+      <td colspan="6" class="text-center"><b>Customer Information</b></td>
+    </tr>
+    <tr>
+      <td colspan="6"><b>Name:</b> @Model.Booking.ContactName</td>
+    </tr>
+    <tr>
+      <td colspan="6"><b>Email:</b> @Model.Booking.ContactEmail</td>
+    </tr>
+    <tr>
+      <td colspan="6"><b>Phone:</b> @Model.Booking.ContactNo</td>
+    </tr>
+  </table>
+</div>
+<div class="text-center hidden-print">
+  <button id="btnSendEmail" type="button" class="btn btn-default btn-lg">Send Email</button>
+  <button id="btnPrint" type="button" class="btn btn-default btn-lg" onclick="window.print()">Print</button>
+</div>

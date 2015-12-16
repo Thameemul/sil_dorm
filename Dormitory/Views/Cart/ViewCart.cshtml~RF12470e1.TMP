@@ -1,0 +1,86 @@
+﻿@model Dormitory.ViewModels.CartVM
+@{
+  ViewBag.Title = "Cart";
+  Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (@Html.BeginForm())
+{
+  @Html.ValidationSummary(true)
+  <fieldset>
+    <legend>View Cart & Confirm</legend>
+    <div style="padding:20px 0">
+      <table class="table table-bordered" id="tblViewCart">
+        <thead>
+          <tr>
+            <th>Room No</th>
+            <th>Date</th>
+            <th>Room Rent</th>
+            <th>Occupancy</th>
+            <th>Food</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        @foreach (var item in Model.CartDetails)
+        {
+          <tr>
+            <td class="col-xs-2 ">@item.RoomNo</td>
+            <td class="col-xs-2 ">@item.Date.ToString("MM/dd/yyyy")</td>
+            <td class="col-xs-2 ">@item.RoomRent</td>
+            <td class="col-xs-2 ">@item.Occupancy</td>
+            <td class="col-xs-2 ">@item.Food</td>
+            <td class="col-xs-2 ">@(item.RoomRent + item.Food)</td>
+          </tr>
+
+        }
+      </table>
+    </div>
+    <div class="center-block">
+      <button type="button" class="btn btn-default btn-default">Book</button>
+      <button type="button" class="btn btn-default btn-default">Confirm</button>
+    </div>
+    <div>
+      <div class="row ForeColorDark fontSize12pt" style="margin: 10px">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-2 middleAlign ">
+              <br />
+              <label class="control-label Caption">Name</label>
+            </div>
+            <div class="col-md-6 " style="margin-right: 5px">
+              <input class="form-control" id="Name" type="text" />
+            </div>
+            <div class="col-md-3">
+              <input type="button" value="Occupant Details" class="btn btn-primary" onclick="location.href='@Url.Action("Address", "Address")'" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <br />
+              <label for="ContactNo" class="control-label Caption">Contact No.</label>
+            </div>
+            <div class="col-md-6">
+              <input class="form-control" id="ContactNo" type="text" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <br />
+              <label class="control-label  Caption" for="Email">E-Mail ID</label>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="Email" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <button type="button" class="btn btn-default btn-md">Send Mail</button>
+        <button type="button" class="btn btn-default btn-md">Print</button>
+        <button type="button" class="btn btn-default btn-md">Cancel</button>
+        <input type="button" value="Exit" class="btn btn-primary" onclick="location.href='@Url.Action("Booking", "Booking")'" />
+      </div>
+  </div>
+  </fieldset>
+
+}

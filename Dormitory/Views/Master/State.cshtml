@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "State List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<script src='@Url.Content("~/Scripts/Master/State.js")' type="text/javascript"></script>
+<script type="text/javascript">
+    @*$(function () {
+        
+        //alert("mytest ");
+        //State("~/Scripts/Master/State.js");
+        State('@Url.Content("~/")');
+    });*@
+</script>
+
+
+<div id="content"  class="border" style="width: 100%;">
+    <div class="row ">
+        <div class="col-md-3 rightAlign" >
+            <input id="btnNew" type="button" value="New State" class="add btn btn-primary" />
+        </div>
+    </div>
+    <div class="row ">
+
+
+        <div class="col-md-3" >
+            <table id="list1"></table>
+            <div id="pager1"></div>
+        </div>
+        <div class="col-md-5">
+            <table id="list2"></table>
+            <div id="pager2"></div>
+        </div>
+        <div class="col-md-4">
+            <table id="list3"></table>
+            <div id="pager3"></div>
+        </div>
+
+    </div>
+    <div class="row ">
+        <div class="col-xs-12" style="width: 100%;">
+            <input id="btnExit" type="button" value="Exit" class="btn btn-primary" onclick="location.href='@Url.Action("MasterMenu", "Master")'" />
+        </div>
+    </div>
+</div>
+    <br />
+
+@{
+    var stateModel = new Dormitory.ViewModels.StateVM();
+}
+
+@*
+    add this in webcofig under appSettings<add key="UnobtrusiveJavaScriptEnabled" value="true" />
+    add jquery.unobtrusive* and jquery.validate*
+    add anatation in ViewModel
+    add this in view var stateModel = new Dormitory.ViewModels.StateVM();
+*@
+
+@*@using (Html.BeginForm())
+{*@
+    @Html.ValidationSummary(true)
+    <div id="Dialogvw" style="display: none;" class="border" >
+        <div id="divMsg" class="fontBold centerAlign foreColorGreen"></div>
+        <form id="stateForm">
+            
+            @Html.Hidden("StateId", new {id = "StateId"})
+            <table>
+                <tr>
+                    <td>
+                        <span id="spanDialogDesc" class="control-label col-sm-2 Caption">State </span>
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => stateModel.StateName, new { id = "txtState", style = "width:200px", @class = "form-control border", @Name = "StateName" })
+                        @*<input id="txtState" type="text" class="form-control" style="width:200px" />*@
+                        @Html.ValidationMessageFor(m => stateModel.StateName, "", new { @data_valmsg_for = "StateName" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="spanDialogDesc" class="control-label col-sm-2 Caption">Country </span>
+                    </td>
+                    <td>
+                        @Html.DropDownList("CountryId", (IEnumerable<SelectListItem>) ViewBag.Country,
+                            new {id = "ddlCountry", style = "max-width: 600px;", @class = "form-control border"}
+                            )
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+@*}*@

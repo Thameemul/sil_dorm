@@ -1,0 +1,88 @@
+﻿namespace EC.Framework.Service.Implementations
+{
+  using System.Collections.Generic;
+  using System.Linq;
+
+  using AutoMapper.QueryableExtensions;
+  using EC.Framework.Common.Entities;
+  using EC.Framework.Data.Contracts.UnitOfWorks;
+  using EC.Framework.Data.Entities;
+  using EC.Framework.Service.Contracts;
+  using EC.Framework.Service.Entities;
+  using System;
+  public class BookingService : IBookingService
+  {
+    private readonly IDormitoryUnitOfWork unitOfWork;
+    public BookingService(IDormitoryUnitOfWork unitOfWork)
+    {
+      this.unitOfWork = unitOfWork;
+    }
+
+    public IDictionary<string, Object> GetBookingDetails(int RoomType, DateTime FromDate, DateTime ToDate, int RoomId)
+    {
+      var roomDetails = this.unitOfWork
+             .Repository<tblRoom>()
+             .Query(x => x.RoomId == RoomId)
+             .Select(x => new RoomStatusItem //&& y.FromDate >= FromDate && y.ToDate <= ToDate
+             {
+               RoomID = x.RoomId,
+               RoomNo = x.RoomNo,//y => y.RoomId == x.RoomId
+               Capacity = x.tblRoomType.Occupancy,
+               RoomStatusDetail = new List<RoomBookingDetail>() { new RoomBookingDetail { BookedDates = x.tblBookingDetails.Where(z => z.RoomId == x.RoomId).Select(a => new BookedDates() { Date = a.Date }).ToList() } },
+               MaintenanceDetail = x.tblMaintenances.Where(y => y.Date >= FromDate && y.Date <= ToDate).Select(y => new RoomMaintenancegDetail
+               {
+                 Date = y.Date
+               }).ToList()
+             })
+             .ToList();
+
+      var columns = new List<string>();
+
+      columns.Add("Room No");
+
+      for (DateTime i = FromDate; i <= ToDate; i = i.AddDays(1))
+      {
+        columns.Add(i.ToString("MM/dd/yyyy"));
+      }
+
+      var rows = new Dictionary<string, Dictionary<string, string>>();
+
+      foreach (var room in roomDetails)
+      {
+        var innerRow = new Dictionary<string, string>();
+
+
+        for (DateTime i = FromDate; i <= ToDate; i = i.AddDays(1))
+        {
+
+          if (room.RoomStatusDetail.Any(x => x.BookedDates.Any( y => y.Date == i)))
+          {
+            innerRow.Add(i.ToString("MM/dd/yyyy"), "Booked");
+          }
+          else if (room.MaintenanceDetail.Any(x => x.Date == i))
+          {
+            innerRow.Add(i.ToString("MM/dd/yyyy"), "Not Available");
+          }
+          else
+          {
+            innerRow.Add(i.ToString("MM/dd/yyyy"), "Available");
+          }
+        }
+
+        rows.Add(room.RoomNo, innerRow);
+
+      }
+
+      var BookingDetails = new Dictionary<string, object>();
+      BookingDetails.Add("columns", columns);
+      BookingDetails.Add("rows", rows);
+
+      return BookingDetails;
+    }
+
+    public int GetBookingDatesCount(long CartId)
+    {
+      return this.unitOfWork.Repository<tblCartDetail>().Query(x => x.CartId == CartId).Select().Count();
+    }
+  }
+}

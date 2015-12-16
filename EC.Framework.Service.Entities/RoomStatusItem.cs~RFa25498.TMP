@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EC.Framework.Service.Entities
+{
+  public class RoomStatusItem
+  {
+    public RoomStatusItem()
+    {
+      this.RoomStatusDetail = new List<RoomStatusDetail>();
+    }
+    public int RoomID { get; set; }
+    public ICollection<RoomStatusDetail> RoomStatusDetail { get; set; }
+  }
+
+  public class RoomStatusDetail
+  {
+    public DateTime StatusDate { get; set; }
+    public int StatusId { get; set; }
+  }
+}

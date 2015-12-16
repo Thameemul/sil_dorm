@@ -1,0 +1,133 @@
+﻿@model IEnumerable<Dormitory.ViewModels.CheckInVM>
+
+
+@{
+    ViewBag.Title = "Check In";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (@Html.BeginForm())
+{
+    <div class="border" style="width: 60%; margin: auto;">
+        @* Container for all controls   *@
+        <div id="content" style="width: 100%; margin: auto; height: 70%;">
+            @* Table Header (TH)   *@
+            <div class="form-group">
+                <div class="siteBackColor fontBold fontSize12pt ForeColorwhite centerAlign">
+                    Check In
+                </div>
+            </div>
+            <div class="row" style="margin: 10px">
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-default btn-md">Show Yesterday</button>
+                </div>
+                <div class="col-md-7 ">
+
+  
+                    <label class="control-label col-sm-2 Caption" style="width: 50%; padding-left: 50px;">
+                        <br/>
+                        Check In Date
+                    </label>
+                        <div class="dropdown" style="width:35%">
+                            <input type="text" class="form-control"  id="exampleInputEmail3" placeholder="dd/MM/yyy">
+                        </div>
+  
+
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-default btn-md">Tomorrow</button>
+                </div>
+            </div>
+            <div class="rTable ">
+                <div class="rborder">
+                    <div class="rTableHead rTableRow">
+                        <div class="col-md-4 siteBackColor fontBold siteContentFont8pt foreColorWhite  centerAlign">
+                            <label class=" control-label">Name</label>
+                        </div>
+                        <div class="col-md-2 siteBackColor fontBold siteContentFont8pt foreColorWhite  centerAlign">
+                            <label class="control-label">RoomNo</label>
+                        </div>
+                        <div class="col-md-2 siteBackColor fontBold siteContentFont8pt foreColorWhite  centerAlign">
+                            <label class="control-label">Check In</label>
+                        </div>
+                        <div class="col-md-2 siteBackColor fontBold siteContentFont8pt foreColorWhite  centerAlign">
+                            <label class="control-label">Cancel</label>
+                        </div>
+                        <div class="col-md-2 siteBackColor fontBold siteContentFont8pt foreColorWhite  centerAlign">
+                            <label class="control-label">Change</label>
+                        </div>
+                    </div>
+                    <div class="siteContentForecolor rTableRow">
+                        <div class=" col-md-4">
+                            <label class="fontBold siteContentFont8pt">Samdoss</label>
+                        </div>
+                        <div class=" col-md-2">
+                            <label class="fontBold siteContentFont8pt">101</label>
+                        </div>
+                        <div class=" col-md-2">
+                            <div class="col-xs-6 Caption" style="width: 30%;">@Html.CheckBox("Test", "Test")</div>
+                        </div>
+                        <div class=" col-md-2">
+                            <div class="col-xs-6 Caption" style="width: 30%;">@Html.CheckBox("Test", "Test")</div>
+                        </div>
+                        <div class=" col-md-2">
+                            <div class="col-xs-6 Caption" style="width: 30%;">@Html.CheckBox("Test", "Test")</div>
+                        </div>
+                    </div>
+
+                    <div class="siteContentForecolor rTableRow">
+                        <div class=" col-md-4">
+                            <label class="fontBold siteContentFont8pt">Karthikeyan</label>
+                        </div>
+                        <div class=" col-md-2">
+                            <label class="fontBold siteContentFont8pt">101</label>
+                        </div>
+                        <div class=" col-md-2">
+                            <div class="col-xs-6 Caption" style="width: 30%;">@Html.CheckBox("Test", "Test")</div>
+                        </div>
+                        <div class=" col-md-2">
+                            <div class="col-xs-6 Caption" style="width: 30%;">@Html.CheckBox("Test", "Test")</div>
+                        </div>
+                        <div class=" col-md-2">
+                            <div class="col-xs-6 Caption" style="width: 30%;">@Html.CheckBox("Test", "Test")</div>
+                        </div>
+                    </div>
+                    <div class="border"></div>
+                    <div class="siteContentForecolor rTableRow">
+                        <div class=" col-md-4">
+                            <label class="fontBold siteContentFont8pt">James</label>
+                        </div>
+                        <div class=" col-md-2">
+                            <label class="fontBold siteContentFont8pt">102</label>
+                        </div>
+                        <div class=" col-md-2">
+                            <div class="col-xs-6 Caption" style="width: 30%;">@Html.CheckBox("Test", "Test")</div>
+                        </div>
+                        <div class=" col-md-2">
+                            <div class="col-xs-6 Caption" style="width: 30%;">@Html.CheckBox("Test", "Test")</div>
+                        </div>
+                        <div class=" col-md-2">
+                            <div class="col-xs-6 Caption" style="width: 30%;">@Html.CheckBox("Test", "Test")</div>
+                        </div>
+                    </div>
+                    <div class="border"></div>
+                </div>
+            </div>
+            
+            <div class="form-group ">
+                <div class="Caption  border" style="width:100%">
+                </div>
+            </div>
+
+            <div class="row" style="margin: 10px">
+                <div class="col-md-7 centerAlign" style="width:100%;">
+                    
+                    <input type="button" value="Advance Details" class="btn btn-primary" onclick="location.href='@Url.Action("AdvanceDetails", "AdvanceDetails")'" />
+                    <input type="button" value="Exit" class="btn btn-primary" onclick="location.href='@Url.Action("Enquiry", "Enquiry")'"/>
+                </div>
+                
+            </div>
+            <br/>
+        </div>
+    </div>
+}

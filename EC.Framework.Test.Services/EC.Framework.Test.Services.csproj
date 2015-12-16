@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FE08D91-64F5-4206-83F7-76B8C9D0D2D5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EC.Framework.Test.Services</RootNamespace>
+    <AssemblyName>EC.Framework.Test.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressServiceTest.cs" />
+    <Compile Include="FakeDormitoryContext.cs" />
+    <Compile Include="FakeDormitoryDbSets.cs" />
+    <Compile Include="FakeDormitoryUnitOfWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EC.Framework.Common.Entities\EC.Framework.Common.Entities.csproj">
+      <Project>{56fd62bd-dcd9-4b6e-a5a2-b907555ff9ed}</Project>
+      <Name>EC.Framework.Common.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EC.Framework.Common.Lib\EC.Framework.Common.Lib.csproj">
+      <Project>{0013ad80-5815-4030-8314-5bb6f604087a}</Project>
+      <Name>EC.Framework.Common.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EC.Framework.Data.Entities\EC.Framework.Data.Entities.csproj">
+      <Project>{0a414af0-b206-4dd8-bb25-19b475b658fa}</Project>
+      <Name>EC.Framework.Data.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EC.Framework.Data.Implementation\EC.Framework.Data.Implementations.csproj">
+      <Project>{bfb60ae8-7445-42e2-956b-1ab4523fc401}</Project>
+      <Name>EC.Framework.Data.Implementations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EC.Framework.Service.Contracts\EC.Framework.Service.Contracts.csproj">
+      <Project>{9497d70e-1ddd-47b7-8282-934fa0ea9e19}</Project>
+      <Name>EC.Framework.Service.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EC.Framework.Service.Entities\EC.Framework.Service.Entities.csproj">
+      <Project>{9ef05d4d-6b11-4217-8720-07fcc4b94e60}</Project>
+      <Name>EC.Framework.Service.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EC.Framework.Service.Implementation\EC.Framework.Service.Implementations.csproj">
+      <Project>{fa030e50-1434-4f93-9f65-ef32880a6d2b}</Project>
+      <Name>EC.Framework.Service.Implementations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EC.Framework.Test.Fakes\EC.Framework.Test.Fakes.csproj">
+      <Project>{caea8738-7572-48d5-9a0d-1050e2a49d96}</Project>
+      <Name>EC.Framework.Test.Fakes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EC.Framework\EC.Framework.Data.Contracts.csproj">
+      <Project>{6f7afbd8-fa73-4069-92e7-3e7b480e7178}</Project>
+      <Name>EC.Framework.Data.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

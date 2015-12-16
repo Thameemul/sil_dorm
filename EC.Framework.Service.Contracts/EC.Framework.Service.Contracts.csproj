@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9497D70E-1DDD-47B7-8282-934FA0EA9E19}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EC.Framework.Service.Contracts</RootNamespace>
+    <AssemblyName>EC.Framework.Service.Contracts</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IAddressService.cs" />
+    <Compile Include="IAdvanceDetailsService.cs" />
+    <Compile Include="ICartService.cs" />
+    <Compile Include="IEnquiryService.cs" />
+    <Compile Include="IBookingService.cs" />
+    <Compile Include="ICheckInService.cs" />
+    <Compile Include="ICityService.cs" />
+    <Compile Include="ICommonService.cs" />
+    <Compile Include="ICountryService.cs" />
+    <Compile Include="IRoomService.cs" />
+    <Compile Include="IRoomTypeService.cs" />
+    <Compile Include="IStateService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EC.Framework.Common.Entities\EC.Framework.Common.Entities.csproj">
+      <Project>{56fd62bd-dcd9-4b6e-a5a2-b907555ff9ed}</Project>
+      <Name>EC.Framework.Common.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EC.Framework.Data.Entities\EC.Framework.Data.Entities.csproj">
+      <Project>{0a414af0-b206-4dd8-bb25-19b475b658fa}</Project>
+      <Name>EC.Framework.Data.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EC.Framework.Service.Entities\EC.Framework.Service.Entities.csproj">
+      <Project>{9ef05d4d-6b11-4217-8720-07fcc4b94e60}</Project>
+      <Name>EC.Framework.Service.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EC.Framework\EC.Framework.Data.Contracts.csproj">
+      <Project>{6f7afbd8-fa73-4069-92e7-3e7b480e7178}</Project>
+      <Name>EC.Framework.Data.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

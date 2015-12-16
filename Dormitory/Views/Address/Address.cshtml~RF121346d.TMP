@@ -1,0 +1,353 @@
+﻿@model Dormitory.ViewModels.AddressVM
+@{
+    ViewBag.Title = "Address";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .myBorder {
+        border: 1px;
+    }
+
+    .noPadding {
+        padding-top: 50px;
+        padding-bottom: 2px;
+    }
+
+    .position {
+        position: relative;
+        left: -5px;
+        top: -13px;
+    }
+
+    .controlColWidth {
+        width:500px;
+    }
+
+    .divAdjust {
+        height: 35px;
+        width: 300px;
+        border: 1px solid blue;
+        overflow: hidden;
+    }
+</style>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.AddressId)
+
+    <div class="border" style="width:55%; margin: auto;">
+        <div id="content" style="width:100%; margin: auto;">
+
+            <div class="form-group">
+                <div class="siteBackColor fontBold fontSize12pt ForeColorwhite centerAlign">
+                    Address
+                </div>
+            </div>
+
+            <div class="form-group border" >
+
+                <label class="control-label col-sm-2 Caption" >
+                    @Html.LabelFor(model => model.Address1)
+                </label>
+
+                <div class="dropdown  " >
+                    &nbsp;&nbsp;&nbsp;&nbsp;@Html.TextBoxFor(model => model.Address1, new { id = "txtAddress1", style = "width:250px", @class = "form-control border" })
+                    @Html.TextBoxFor(model => model.Address2, new { id = "txtAddress2", style = "width:250px", @class = "form-control border divWidth" })
+                    @Html.TextBoxFor(model => model.Address3, new { id = "txtAddress3", style = "width:250px", @class = "form-control border" })
+                </div>
+
+            </div>
+                @*<div class="form-group border  ">
+                    <label class="control-label col-sm-2 Caption">
+
+                    </label>
+                    <div class="dropdown ">
+                        @Html.TextBoxFor(model => model.Address2, new { id = "txtAddress2", style = "width:250px", @class = "form-control border" })
+                    </div>
+                </div>
+                <div class="form-group border">
+                    <label class="control-label col-sm-2">
+                        
+                    </label>
+                    <div class="dropdown ">
+                        @Html.TextBoxFor(model => model.Address3, new { id = "txtAddress3", style = "width:250px", @class = "form-control border" })
+                    </div>
+                </div>*@
+                <div class="form-group">
+                    <label class="control-label col-sm-2 Caption">@Html.LabelFor(model => model.CityId)</label>
+                    <div class="dropdown ">
+                        @Html.DropDownListFor(model => model.CityId, new List<SelectListItem> {
+                        new SelectListItem { Value = "0" , Text = "Chennai" },
+                        new SelectListItem { Value = "1" , Text = "Trichy" },
+                        new SelectListItem { Value = "2" , Text = "Madurai" }
+                    }, new { id = "ddlCity", style = "width:250px", @class = "form-control border" })
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <label class="control-label col-sm-2 Caption">@Html.LabelFor(model => model.StateId)</label>
+
+                    <div class="dropdown ">
+                        @Html.DropDownListFor(model => model.StateId, new List<SelectListItem> {
+                        new SelectListItem { Value = "0" , Text = "Tamilnadu" },
+                        new SelectListItem { Value = "1" , Text = "Kerala" },
+                        new SelectListItem { Value = "2" , Text = "Mumbai" }
+                    }, new { id = "ddlState", style = "width:250px", @class = "form-control border" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2 Caption">@Html.LabelFor(model => model.CountryId)</label>
+                    <div class="dropdown ">
+                        @Html.DropDownListFor(model => model.CountryId, new List<SelectListItem> {
+                        new SelectListItem { Value = "0" , Text = "India" },
+                        new SelectListItem { Value = "1" , Text = "Srilanka" },
+                        new SelectListItem { Value = "2" , Text = "USA" }
+                    }, new { id = "ddlCountry", style = "width:250px", @class = "form-control border" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2 Caption">
+                        @Html.LabelFor(model => model.Pincode)
+                    </label>
+                    <div class="dropdown ">
+
+                        @Html.TextBoxFor(model => model.Pincode, new { id = "txtPincode", style = "width:250px", @class = "form-control border" })
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10 Caption">
+                        <input id="btnSave" type="Submit" value="Save" />&nbsp;&nbsp;
+                        <input id="btnExit" type="button" value="Exit" onclick="history.go(-1);" />
+                        @*<button type="submit" class="btn btn-default">Submit</button>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    @*<div id="content" class="table">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="siteBackColor fontBold fontSize12pt ForeColorwhite centerAlign">
+                        Address
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <div class="Caption rightAlign" style="float: left; width: 25%; ">
+                        <div>
+                            @Html.LabelFor(Model => Model.Address1)
+                        </div>
+                    </div>
+                    <div >
+                        <div>
+                            @Html.TextBoxFor(model => model.Address1, new { id = "txtAddress1", style = "width:250px", @class = "border" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+    @*<div id="content" class="divTable border">
+            <div class="divRow">
+                <div>
+                    <div class="siteBackColor fontBold fontSize12pt ForeColorwhite centerAlign">
+                        Address
+                    </div>
+                </div>
+            </div>
+            <div class="divRow">
+                <div>
+                    <div class="Caption rightAlign" style="float: left; width: 25%; ">
+                        <div>
+                            @Html.LabelFor(Model => Model.Address1)
+                        </div>
+                    </div>
+                    <div style="width: 74%;">
+                        <div>
+                            @Html.TextBoxFor(model => model.Address1, new { id = "txtAddress1", style = "width:250px", @class = "border" })
+                        </div>
+                        <div style="padding-left: 33.8%;">
+                            @Html.TextBoxFor(model => model.Address2, new { id = "txtAddress2", style = "width:250px", @class = "border" })
+                        </div>
+                        <div style="padding-left: 33.8%;">
+                            @Html.TextBoxFor(model => model.Address3, new { id = "txtAddress3", style = "width:250px", @class = "border" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divRow">
+                <div class="Caption rightAlign" style="float:left;width: 25%">
+                    <div>
+                        @Html.LabelFor(Model => Model.CityId)
+                    </div>
+                </div>
+                <div style="width: 74%">
+                    <div>
+                        @Html.DropDownListFor(model => model.CityId, new List<SelectListItem> {
+                            new SelectListItem { Value = "0" , Text = "Chennai" },
+                            new SelectListItem { Value = "1" , Text = "Trichy" },
+                            new SelectListItem { Value = "2" , Text = "Madurai" }
+                        }, new { id = "ddlCity", style = "width:262px", @class = "border" })
+                    </div>
+                </div>
+            </div>
+            <div class="divRow">
+                <div class="Caption rightAlign" style="float:left;width: 25%">
+                    <div>
+                        @Html.LabelFor(Model => Model.StateId)
+                    </div>
+                </div>
+                <div style="width: 74%">
+                    <div>
+                        @Html.DropDownListFor(model => model.StateId, new List<SelectListItem> {
+                            new SelectListItem { Value = "0" , Text = "Tamilnadu" },
+                            new SelectListItem { Value = "1" , Text = "Kerala" },
+                            new SelectListItem { Value = "2" , Text = "Mumbai" }
+                        }, new { id = "ddlState", style = "width:262px", @class = "border" })
+                    </div>
+                </div>
+            </div>
+            <div class="divRow">
+                <div class="Caption rightAlign" style="float:left;width: 25%">
+                    <div>
+                        @Html.LabelFor(Model => Model.CountryId)
+                    </div>
+                </div>
+                <div style="width: 74%">
+                    <div>
+                        @Html.DropDownListFor(model => model.CountryId, new List<SelectListItem> {
+                            new SelectListItem { Value = "0" , Text = "India" },
+                            new SelectListItem { Value = "1" , Text = "Srilanka" },
+                            new SelectListItem { Value = "2" , Text = "USA" }
+                        }, new { id = "ddlCountry", style = "width:262px", @class = "border" })
+                    </div>
+                </div>
+            </div>
+            <div class="divRow">
+                <div class="Caption rightAlign" style="float:left;width: 25%">
+                    <div>
+                        @Html.LabelFor(Model => Model.Pincode)
+                    </div>
+                </div>
+                <div style="width: 74%">
+                    <div>
+                        @Html.TextBoxFor(model => model.Pincode, new { id = "txtPincode", style = "width:250px", @class = "border" })
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+    @*<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <table border="0" width="78%">
+            <tr>
+                <td width="30%"></td>
+                <td>
+                    <table border="0" cellpadding="0" cellspacing="0" width="80%" class="border" style="margin: auto;">
+                        <tr>
+                            <td class="siteBackColor fontBold fontSize12pt ForeColorwhite centerAlign">
+                                Address
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="">
+                                <br />
+                                <table border="0" width="100%">
+                                    <tr>
+                                        <td width="30%" class="Caption rightAlign topAlign">
+                                            <br/>
+                                            @Html.LabelFor(Model => Model.Address1)&nbsp;&nbsp;&nbsp;
+                                        </td>
+                                        <td class="siteContentBGColor">
+                                            @Html.TextBoxFor(model => model.Address1, new { id = "txtAddress1", style = "width:250px", @class = "border" })
+                                            @Html.TextBoxFor(model => model.Address2, new { id = "txtAddress2", style = "width:250px", @class = "border" })
+                                            @Html.TextBoxFor(model => model.Address3, new { id = "txtAddress3", style = "width:250px", @class = "border" })
+                                        </td>
+                                    </tr>
+                                    @*<tr>
+                                        <td width="30%" class="Caption rightAlign">
+                                        </td>
+                                        <td class="siteContentBGColor">
+                                            @Html.TextBoxFor(model => model.Address2, new { id = "txtAddress2", style = "width:250px", @class = "border" })
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%" class="Caption rightAlign"></td>
+                                        <td class="siteContentBGColor">
+                                            @Html.TextBoxFor(model => model.Address3, new { id = "txtAddress3", style = "width:250px", @class = "border" })
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%" class="Caption rightAlign">
+                                            <br />
+                                            @Html.LabelFor(Model => Model.CityId)&nbsp;&nbsp;&nbsp;
+                                        </td>
+                                        <td class="siteContentBGColor">
+                                            @Html.DropDownListFor(model => model.CityId, new List<SelectListItem> {
+                                                new SelectListItem { Value = "0" , Text = "Chennai" },
+                                                new SelectListItem { Value = "1" , Text = "Trichy" },
+                                                new SelectListItem { Value = "2" , Text = "Madurai" }
+                                            }, new { id = "ddlCity", style = "width:262px", @class = "border" })
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%" class="Caption rightAlign">
+                                            <br />
+                                            @Html.LabelFor(Model => Model.StateId)&nbsp;&nbsp;&nbsp;
+                                        </td>
+                                        <td class="siteContentBGColor">
+                                            @Html.DropDownListFor(model => model.StateId, new List<SelectListItem> {
+                                                new SelectListItem { Value = "0" , Text = "Tamilnadu" },
+                                                new SelectListItem { Value = "1" , Text = "Kerala" },
+                                                new SelectListItem { Value = "2" , Text = "Mumbai" }
+                                            }, new { id = "ddlState", style = "width:262px", @class = "border" })
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%" class="Caption rightAlign">
+                                            <br />
+                                            @Html.LabelFor(Model => Model.CountryId)&nbsp;&nbsp;&nbsp;
+                                        </td>
+                                        <td class="siteContentBGColor">
+                                            @Html.DropDownListFor(model => model.CountryId, new List<SelectListItem> {
+                                                new SelectListItem { Value = "0" , Text = "India" },
+                                                new SelectListItem { Value = "1" , Text = "Srilanka" },
+                                                new SelectListItem { Value = "2" , Text = "USA" }
+                                            }, new { id = "ddlCountry", style = "width:262px", @class = "border" })
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%" class="Caption rightAlign">
+                                            <br />
+                                            @Html.LabelFor(Model => Model.Pincode)&nbsp;&nbsp;&nbsp;
+                                        </td>
+                                        <td class="siteContentBGColor">
+                                            @Html.TextBoxFor(model => model.Pincode, new { id = "txtPincode", style = "width:250px", @class = "border" })
+                                        </td>
+                                    </tr>
+                                    <tr >
+                                        <td colspan="2" class="siteContentBGColor">
+                                            <br/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" colspan="2" class="siteContentBGColor">
+                                            <input id="btnSave" type="Submit" value="Save" />&nbsp;&nbsp;
+                                            <input id="btnExit" type="button" value="Exit" onclick="history.go(-1);" />
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+
+
+                    </table>
+               </td>
+            </tr>
+        </table>*@
+    <br /><br />
+}

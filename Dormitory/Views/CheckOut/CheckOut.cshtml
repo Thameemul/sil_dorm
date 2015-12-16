@@ -1,0 +1,167 @@
+﻿@using DotNetOpenAuth.OpenId.Extensions.AttributeExchange
+@{
+    ViewBag.Title = "CheckOut";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="border" style="width:80%; margin: auto;">
+    @* Container for all controls   *@
+    <div id="content" style="width:100%; margin: auto; height:70%;">
+        @* Table Header (TH)   *@
+        <div class="form-group">
+            <div class="siteBackColor fontBold fontSize12pt ForeColorwhite centerAlign">
+                Check Out
+            </div>
+        </div>
+        @* Row (Label with Textbox)   *@
+        <div class="form-group">
+            <label class="control-label col-sm-2 Caption" style="width: 30%; padding-left: 100px;">
+                <br/>
+                Check Out Date
+            </label>
+            <div class="dropdown" style="width:20%">
+                <input type="email" class="form-control" id="exampleInputEmail3" placeholder="dd/MM/yyy">
+            </div>
+        </div>
+        <div class="rTable">
+            <div class="rborder">
+                <div class="rTableHead rTableRow">
+                    <div class="col-xs-1  siteBackColor fontBold siteContentFont8pt foreColorWhite  centerAlign" style="width: 10%">
+                        <label class=" control-label">Name<br />&nbsp;</label>
+                    </div>
+                    <div class="col-xs-1  siteBackColor fontBold siteContentFont8pt foreColorWhite  centerAlign" style="width: 12%">
+                        <label class=" control-label">Room No<br />&nbsp;</label>
+                    </div>
+                    <div class="col-xs-1  siteBackColor fontBold siteContentFont8pt foreColorWhite  centerAlign" style="width: 14%">
+                        <label class="fontBold siteContentFont8pt">No of Days<br />&nbsp;</label>
+                    </div>
+                    <div class="col-xs-1  siteBackColor fontBold siteContentFont8pt foreColorWhite  centerAlign" style="width: 16%">
+                        <label class="fontBold siteContentFont8pt">Room Rent<br /><span style="font-size:11px;">(A)</span></label>
+                    </div>
+                    <div class="col-xs-1  siteBackColor fontBold siteContentFont8pt foreColorWhite  centerAlign" style="width: 10%">
+                        <label class="fontBold siteContentFont8pt">Food<br /><span style="font-size:11px;">(B)</span></label>
+                    </div>
+                    <div class="col-xs-1  siteBackColor fontBold siteContentFont8pt foreColorWhite  centerAlign" style="width: 10%">
+                        <label class="fontBold siteContentFont8pt">Others<br /><span style="font-size:11px;">(C)</span></label>
+                    </div>
+                    <div class="col-xs-1  siteBackColor fontBold siteContentFont8pt foreColorWhite  centerAlign" style="width: 10%">
+                        <label class="fontBold siteContentFont8pt">Advance<br /><span style="font-size:11px;">(D)</span></label>
+                    </div>
+                    <div class="col-xs-1  siteBackColor fontBold siteContentFont8pt foreColorWhite  centerAlign" style="width: 18%">
+                        <label class="fontBold siteContentFont8pt">Total<br /><span style="font-size:11px;">(A+B+C-D)</span></label>
+                    </div>
+                </div>
+                <div class="siteContentForecolor rTableRow">
+                    <div class="rTableCell col-xs-1 "  data-title="Name" style="width: 10%">
+                        <label class="fontBold siteContentFont8pt">Samdoss</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Room No" style="width: 12%">
+                        <label class="fontBold siteContentFont8pt">101</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="No of Days" style="width: 14%">
+                        <label class="fontBold siteContentFont8pt">1</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Room Rent" style="width: 16%">
+                        <label class="fontBold siteContentFont8pt">1200</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Food" style="width: 10%">
+                        <label class="fontBold siteContentFont8pt">700</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Others" style="width: 10%">
+                        <label class="fontBold siteContentFont8pt">100</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Advance" style="width: 10%">
+                        <label class="fontBold siteContentFont8pt">1000</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Total" style="width: 18%">
+                        <label class="fontBold siteContentFont8pt">1000</label>
+                    </div>
+                </div>
+                <div class="siteContentForecolor rTableRow">
+                    <div class="rTableCell col-xs-1"  data-title="Name" style="width: 10%">
+                        <label class="fontBold siteContentFont8pt">Karthi</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Room No" style="width: 12%">
+                        <label class="fontBold siteContentFont8pt">102</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="No of Days" style="width: 14%">
+                        <label class="fontBold siteContentFont8pt">1</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Room Rent" style="width: 16%">
+                        <label class="fontBold siteContentFont8pt">1200</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Food" style="width: 10%">
+                        <label class="fontBold siteContentFont8pt">700</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Others" style="width: 10%">
+                        <label class="fontBold siteContentFont8pt">100</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Advance" style="width: 10%">
+                        <label class="fontBold siteContentFont8pt">1000</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Total" style="width: 18%">
+                        <label class="fontBold siteContentFont8pt">1000</label>
+                    </div>
+                </div>
+                <div class="siteContentForecolor rTableRow">
+                    <div class="rTableCell col-xs-1"  data-title="Name" style="width: 10%">
+                        <label class="fontBold siteContentFont8pt">Aslam</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Room No" style="width: 12%">
+                        <label class="fontBold siteContentFont8pt">103</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="No of Days" style="width: 14%">
+                        <label class="fontBold siteContentFont8pt">1</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Room Rent" style="width: 16%">
+                        <label class="fontBold siteContentFont8pt">1200</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Food" style="width: 10%">
+                        <label class="fontBold siteContentFont8pt">700</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Others" style="width: 10%">
+                        <label class="fontBold siteContentFont8pt">100</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Advance" style="width: 10%">
+                        <label class="fontBold siteContentFont8pt">1000</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Total" style="width: 18%">
+                        <label class="fontBold siteContentFont8pt">1000</label>
+                    </div>
+                </div>
+                <div class="siteContentForecolor rTableRow">
+                    <div class="rTableCell col-xs-1"  data-title="Name" style="width: 10%">
+                        <label class="fontBold siteContentFont8pt">Saravanan</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Room No" style="width: 12%">
+                        <label class="fontBold siteContentFont8pt">104</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="No of Days" style="width: 14%">
+                        <label class="fontBold siteContentFont8pt">1</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Room Rent" style="width: 16%">
+                        <label class="fontBold siteContentFont8pt">1200</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Food" style="width: 10%">
+                        <label class="fontBold siteContentFont8pt">700</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Others" style="width: 10%">
+                        <label class="fontBold siteContentFont8pt">100</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Advance" style="width: 10%">
+                        <label class="fontBold siteContentFont8pt">1000</label>
+                    </div>
+                    <div class="rTableCell col-xs-1 centerAlign" data-title="Total" style="width: 18%">
+                        <label class="fontBold siteContentFont8pt">1000</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="borderColorBlue"/>
+    <div class="centerAlign">
+    
+        <input id="btnExit" type="button" value="Exit" style="font-size: 12pt;" class="btn btn-primary" onclick="location.href='@Url.Action("Menu", "Home")'" />
+    
+    </div>
+    <br />
+    </div>

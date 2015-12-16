@@ -1,0 +1,18 @@
+D:\Sil Dormitory\EC.Framework.Common.Entities\bin\Debug\EC.Framework.Common.Entities.dll
+D:\Sil Dormitory\EC.Framework.Common.Entities\bin\Debug\EC.Framework.Common.Entities.pdb
+D:\Sil Dormitory\EC.Framework.Common.Entities\obj\Debug\EC.Framework.Common.Entities.dll
+D:\Sil Dormitory\EC.Framework.Common.Entities\obj\Debug\EC.Framework.Common.Entities.pdb
+E:\ECGroupProjects\Sil Dormitory\Sil Dormitory\EC.Framework.Common.Entities\bin\Debug\EC.Framework.Common.Entities.dll
+E:\ECGroupProjects\Sil Dormitory\Sil Dormitory\EC.Framework.Common.Entities\bin\Debug\EC.Framework.Common.Entities.pdb
+E:\ECGroupProjects\Sil Dormitory\Sil Dormitory\EC.Framework.Common.Entities\obj\Debug\EC.Framework.Common.Entities.dll
+E:\ECGroupProjects\Sil Dormitory\Sil Dormitory\EC.Framework.Common.Entities\obj\Debug\EC.Framework.Common.Entities.pdb
+C:\Users\Thameem\Desktop\Sil Dormitory\Sil Dormitory\EC.Framework.Common.Entities\bin\Debug\EC.Framework.Common.Entities.dll
+C:\Users\Thameem\Desktop\Sil Dormitory\Sil Dormitory\EC.Framework.Common.Entities\bin\Debug\EC.Framework.Common.Entities.pdb
+C:\Users\Thameem\Desktop\Sil Dormitory\Sil Dormitory\EC.Framework.Common.Entities\obj\Debug\EC.Framework.Common.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Thameem\Desktop\Sil Dormitory\Sil Dormitory\EC.Framework.Common.Entities\obj\Debug\EC.Framework.Common.Entities.dll
+C:\Users\Thameem\Desktop\Sil Dormitory\Sil Dormitory\EC.Framework.Common.Entities\obj\Debug\EC.Framework.Common.Entities.pdb
+C:\Users\Thameem\Desktop\Sil Dormitory\EC.Framework.Common.Entities\bin\Debug\EC.Framework.Common.Entities.dll
+C:\Users\Thameem\Desktop\Sil Dormitory\EC.Framework.Common.Entities\bin\Debug\EC.Framework.Common.Entities.pdb
+C:\Users\Thameem\Desktop\Sil Dormitory\EC.Framework.Common.Entities\obj\Debug\EC.Framework.Common.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Thameem\Desktop\Sil Dormitory\EC.Framework.Common.Entities\obj\Debug\EC.Framework.Common.Entities.dll
+C:\Users\Thameem\Desktop\Sil Dormitory\EC.Framework.Common.Entities\obj\Debug\EC.Framework.Common.Entities.pdb

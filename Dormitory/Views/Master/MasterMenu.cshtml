@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Master Menu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (@Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <div class="border" style="width: 50%; margin: auto;">
+        @* Container for all controls   *@
+        <div id="content" style="width: 100%; margin: auto; height: 70%;">
+            @* Table Header (TH)   *@
+
+            <div class="form-group">
+                <div class="siteBackColor fontBold fontSize12pt ForeColorwhite centerAlign">
+                    Master Menu
+                </div>
+            </div>
+            <div class="form-group  ">
+                <nav>
+                    <ul class="nav nav-pills nav-stacked fontSize12pt centerAlign">
+                        <li>@Html.ActionLink("State", "State", "Master")</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+}

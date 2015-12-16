@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<BoundedContexts>
+		<BoundedContext>
+			<ContextName>DormitoryContext</ContextName>
+			<ContextPath>..\EC.Framework.Data.Implementation\UnitOfWorks</ContextPath>
+			<EntitiesPath>..\EC.Framework.Data.Entities\Generated</EntitiesPath>
+			<Namespace>EC.Framework.Data.Entities</Namespace>
+			<DbSets>
+				<DbSet>
+					<Name>tblAddress</Name>
+					<NavigationProperties />
+				</DbSet>
+				<DbSet>
+					<Name>tblAdvance</Name>
+					<NavigationProperties>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>false</IsReverse>
+							<TableName>This</TableName>
+							<Key>BookingId</Key>
+							<GeneratedProperty>public virtual tblBooking tblBooking { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual tblBooking tblBooking { get; set; }</PropertyInFile>
+						</NavigationProperty>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>false</IsReverse>
+							<TableName>This</TableName>
+							<Key>CustomerId</Key>
+							<GeneratedProperty>public virtual tblCustomer tblCustomer { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual tblCustomer tblCustomer { get; set; }</PropertyInFile>
+						</NavigationProperty>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>false</IsReverse>
+							<TableName>This</TableName>
+							<Key>RoomId</Key>
+							<GeneratedProperty>public virtual tblRoom tblRoom { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual tblRoom tblRoom { get; set; }</PropertyInFile>
+						</NavigationProperty>
+					</NavigationProperties>
+				</DbSet>
+				<DbSet>
+					<Name>tblBooking</Name>
+					<NavigationProperties>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>true</IsReverse>
+							<TableName>tblAdvance</TableName>
+							<Key>BookingId</Key>
+							<GeneratedProperty>public virtual ICollection&lt;tblAdvance&gt; tblAdvances { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual ICollection&lt;tblAdvance&gt; tblAdvances { get; set; }</PropertyInFile>
+						</NavigationProperty>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>true</IsReverse>
+							<TableName>tblCheckIn</TableName>
+							<Key>BookingId</Key>
+							<GeneratedProperty>public virtual ICollection&lt;tblCheckIn&gt; tblCheckIns { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual ICollection&lt;tblCheckIn&gt; tblCheckIns { get; set; }</PropertyInFile>
+						</NavigationProperty>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>false</IsReverse>
+							<TableName>This</TableName>
+							<Key>CustomerId</Key>
+							<GeneratedProperty>public virtual tblCustomer tblCustomer { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual tblCustomer tblCustomer { get; set; }</PropertyInFile>
+						</NavigationProperty>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>false</IsReverse>
+							<TableName>This</TableName>
+							<Key>RoomId</Key>
+							<GeneratedProperty>public virtual tblRoom tblRoom { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual tblRoom tblRoom { get; set; }</PropertyInFile>
+						</NavigationProperty>
+					</NavigationProperties>
+				</DbSet>
+				<DbSet>
+					<Name>tblCheckIn</Name>
+					<NavigationProperties>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>false</IsReverse>
+							<TableName>This</TableName>
+							<Key>BookingId</Key>
+							<GeneratedProperty>public virtual tblBooking tblBooking { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual tblBooking tblBooking { get; set; }</PropertyInFile>
+						</NavigationProperty>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>false</IsReverse>
+							<TableName>This</TableName>
+							<Key>RoomId</Key>
+							<GeneratedProperty>public virtual tblRoom tblRoom { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual tblRoom tblRoom { get; set; }</PropertyInFile>
+						</NavigationProperty>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>false</IsReverse>
+							<TableName>This</TableName>
+							<Key>CustomerId</Key>
+							<GeneratedProperty>public virtual tblCustomer tblCustomer { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual tblCustomer tblCustomer { get; set; }</PropertyInFile>
+						</NavigationProperty>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>false</IsReverse>
+							<TableName>This</TableName>
+							<Key>DocumentTypeId</Key>
+							<GeneratedProperty>public virtual tblDocumentType tblDocumentType { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual tblDocumentType tblDocumentType { get; set; }</PropertyInFile>
+						</NavigationProperty>
+					</NavigationProperties>
+				</DbSet>
+				<DbSet>
+					<Name>tblCheckOut</Name>
+					<NavigationProperties />
+				</DbSet>
+				<DbSet>
+					<Name>tblCity</Name>
+					<NavigationProperties />
+				</DbSet>
+				<DbSet>
+					<Name>tblCountry</Name>
+					<NavigationProperties>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>true</IsReverse>
+							<TableName>tblState</TableName>
+							<Key>CountryId</Key>
+							<GeneratedProperty>public virtual ICollection&lt;tblState&gt; tblStates { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual ICollection&lt;tblState&gt; tblStates { get; set; }</PropertyInFile>
+						</NavigationProperty>
+					</NavigationProperties>
+				</DbSet>
+				<DbSet>
+					<Name>tblCustomer</Name>
+					<NavigationProperties>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>true</IsReverse>
+							<TableName>tblAdvance</TableName>
+							<Key>CustomerId</Key>
+							<GeneratedProperty>public virtual ICollection&lt;tblAdvance&gt; tblAdvances { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual ICollection&lt;tblAdvance&gt; tblAdvances { get; set; }</PropertyInFile>
+						</NavigationProperty>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>true</IsReverse>
+							<TableName>tblBooking</TableName>
+							<Key>CustomerId</Key>
+							<GeneratedProperty>public virtual ICollection&lt;tblBooking&gt; tblBookings { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual ICollection&lt;tblBooking&gt; tblBookings { get; set; }</PropertyInFile>
+						</NavigationProperty>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>true</IsReverse>
+							<TableName>tblCheckIn</TableName>
+							<Key>CustomerId</Key>
+							<GeneratedProperty>public virtual ICollection&lt;tblCheckIn&gt; tblCheckIns { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual ICollection&lt;tblCheckIn&gt; tblCheckIns { get; set; }</PropertyInFile>
+						</NavigationProperty>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>false</IsReverse>
+							<TableName>This</TableName>
+							<Key>OrganizationId</Key>
+							<GeneratedProperty>public virtual tblOrganization tblOrganization { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual tblOrganization tblOrganization { get; set; }</PropertyInFile>
+						</NavigationProperty>
+					</NavigationProperties>
+				</DbSet>
+				<DbSet>
+					<Name>tblDocumentType</Name>
+					<NavigationProperties>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>true</IsReverse>
+							<TableName>tblCheckIn</TableName>
+							<Key>DocumentTypeId</Key>
+							<GeneratedProperty>public virtual ICollection&lt;tblCheckIn&gt; tblCheckIns { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual ICollection&lt;tblCheckIn&gt; tblCheckIns { get; set; }</PropertyInFile>
+						</NavigationProperty>
+					</NavigationProperties>
+				</DbSet>
+				<DbSet>
+					<Name>tblFloor</Name>
+					<NavigationProperties>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>true</IsReverse>
+							<TableName>tblRoom</TableName>
+							<Key>FloorId</Key>
+							<GeneratedProperty>public virtual ICollection&lt;tblRoom&gt; tblRooms { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual ICollection&lt;tblRoom&gt; tblRooms { get; set; }</PropertyInFile>
+						</NavigationProperty>
+					</NavigationProperties>
+				</DbSet>
+				<DbSet>
+					<Name>tblMaintenance</Name>
+					<NavigationProperties>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>false</IsReverse>
+							<TableName>This</TableName>
+							<Key>RoomId</Key>
+							<GeneratedProperty>public virtual tblRoom tblRoom { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual tblRoom tblRoom { get; set; }</PropertyInFile>
+						</NavigationProperty>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>false</IsReverse>
+							<TableName>This</TableName>
+							<Key>StaffId</Key>
+							<GeneratedProperty>public virtual tblStaff tblStaff { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual tblStaff tblStaff { get; set; }</PropertyInFile>
+						</NavigationProperty>
+					</NavigationProperties>
+				</DbSet>
+				<DbSet>
+					<Name>tblOrganization</Name>
+					<NavigationProperties>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>true</IsReverse>
+							<TableName>tblCustomer</TableName>
+							<Key>OrganizationId</Key>
+							<GeneratedProperty>public virtual ICollection&lt;tblCustomer&gt; tblCustomers { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual ICollection&lt;tblCustomer&gt; tblCustomers { get; set; }</PropertyInFile>
+						</NavigationProperty>
+					</NavigationProperties>
+				</DbSet>
+				<DbSet>
+					<Name>tblRoom</Name>
+					<NavigationProperties>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>true</IsReverse>
+							<TableName>tblAdvance</TableName>
+							<Key>RoomId</Key>
+							<GeneratedProperty>public virtual ICollection&lt;tblAdvance&gt; tblAdvances { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual ICollection&lt;tblAdvance&gt; tblAdvances { get; set; }</PropertyInFile>
+						</NavigationProperty>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>true</IsReverse>
+							<TableName>tblBooking</TableName>
+							<Key>RoomId</Key>
+							<GeneratedProperty>public virtual ICollection&lt;tblBooking&gt; tblBookings { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual ICollection&lt;tblBooking&gt; tblBookings { get; set; }</PropertyInFile>
+						</NavigationProperty>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>true</IsReverse>
+							<TableName>tblCheckIn</TableName>
+							<Key>RoomId</Key>
+							<GeneratedProperty>public virtual ICollection&lt;tblCheckIn&gt; tblCheckIns { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual ICollection&lt;tblCheckIn&gt; tblCheckIns { get; set; }</PropertyInFile>
+						</NavigationProperty>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>true</IsReverse>
+							<TableName>tblMaintenance</TableName>
+							<Key>RoomId</Key>
+							<GeneratedProperty>public virtual ICollection&lt;tblMaintenance&gt; tblMaintenances { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual ICollection&lt;tblMaintenance&gt; tblMaintenances { get; set; }</PropertyInFile>
+						</NavigationProperty>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>false</IsReverse>
+							<TableName>This</TableName>
+							<Key>FloorId</Key>
+							<GeneratedProperty>public virtual tblFloor tblFloor { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual tblFloor tblFloor { get; set; }</PropertyInFile>
+						</NavigationProperty>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>false</IsReverse>
+							<TableName>This</TableName>
+							<Key>StatusId</Key>
+							<GeneratedProperty>public virtual tblStatus tblStatus { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual tblStatus tblStatus { get; set; }</PropertyInFile>
+						</NavigationProperty>
+					</NavigationProperties>
+				</DbSet>
+				<DbSet>
+					<Name>tblRoomCustomerMap</Name>
+					<NavigationProperties />
+				</DbSet>
+				<DbSet>
+					<Name>tblRoomType</Name>
+					<NavigationProperties />
+				</DbSet>
+				<DbSet>
+					<Name>tblStaff</Name>
+					<NavigationProperties>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>true</IsReverse>
+							<TableName>tblMaintenance</TableName>
+							<Key>StaffId</Key>
+							<GeneratedProperty>public virtual ICollection&lt;tblMaintenance&gt; tblMaintenances { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual ICollection&lt;tblMaintenance&gt; tblMaintenances { get; set; }</PropertyInFile>
+						</NavigationProperty>
+					</NavigationProperties>
+				</DbSet>
+				<DbSet>
+					<Name>tblState</Name>
+					<NavigationProperties>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>false</IsReverse>
+							<TableName>This</TableName>
+							<Key>CountryId</Key>
+							<GeneratedProperty>public virtual tblCountry tblCountry { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual tblCountry tblCountry { get; set; }</PropertyInFile>
+						</NavigationProperty>
+					</NavigationProperties>
+				</DbSet>
+				<DbSet>
+					<Name>tblStatus</Name>
+					<NavigationProperties>
+						<NavigationProperty>
+							<IsIncluded>true</IsIncluded>
+							<IsReverse>true</IsReverse>
+							<TableName>tblRoom</TableName>
+							<Key>StatusId</Key>
+							<GeneratedProperty>public virtual ICollection&lt;tblRoom&gt; tblRooms { get; set; }</GeneratedProperty>
+							<PropertyInFile>public virtual ICollection&lt;tblRoom&gt; tblRooms { get; set; }</PropertyInFile>
+						</NavigationProperty>
+					</NavigationProperties>
+				</DbSet>
+			</DbSets>
+		</BoundedContext>
+	</BoundedContexts>
+	<ConnectionString>Data Source=JAMES-PC;Initial Catalog=Dormitory;Persist Security Info=True;User ID=sa;Password=ecgroup123</ConnectionString>
+</root>

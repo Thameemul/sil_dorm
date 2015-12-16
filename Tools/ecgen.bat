@@ -1,0 +1,1 @@
+ecgen gen DormitoryContext.xml

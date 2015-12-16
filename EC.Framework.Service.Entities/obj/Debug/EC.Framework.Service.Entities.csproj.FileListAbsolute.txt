@@ -1,0 +1,25 @@
+D:\Sil Dormitory\EC.Framework.Service.Entities\bin\Debug\EC.Framework.Service.Entities.dll
+D:\Sil Dormitory\EC.Framework.Service.Entities\bin\Debug\EC.Framework.Service.Entities.pdb
+D:\Sil Dormitory\EC.Framework.Service.Entities\obj\Debug\EC.Framework.Service.Entities.dll
+D:\Sil Dormitory\EC.Framework.Service.Entities\obj\Debug\EC.Framework.Service.Entities.pdb
+D:\Sil Dormitory\EC.Framework.Service.Entities\obj\Debug\EC.Framework.Service.Entities.csprojResolveAssemblyReference.cache
+E:\ECGroupProjects\Sil Dormitory\Sil Dormitory\EC.Framework.Service.Entities\bin\Debug\EC.Framework.Service.Entities.dll
+E:\ECGroupProjects\Sil Dormitory\Sil Dormitory\EC.Framework.Service.Entities\bin\Debug\EC.Framework.Service.Entities.pdb
+E:\ECGroupProjects\Sil Dormitory\Sil Dormitory\EC.Framework.Service.Entities\obj\Debug\EC.Framework.Service.Entities.dll
+E:\ECGroupProjects\Sil Dormitory\Sil Dormitory\EC.Framework.Service.Entities\obj\Debug\EC.Framework.Service.Entities.pdb
+C:\Users\Thameem\Desktop\Sil Dormitory\Sil Dormitory\EC.Framework.Service.Entities\bin\Debug\EC.Framework.Service.Entities.dll
+C:\Users\Thameem\Desktop\Sil Dormitory\Sil Dormitory\EC.Framework.Service.Entities\bin\Debug\EC.Framework.Service.Entities.pdb
+C:\Users\Thameem\Desktop\Sil Dormitory\Sil Dormitory\EC.Framework.Service.Entities\obj\Debug\EC.Framework.Service.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Thameem\Desktop\Sil Dormitory\Sil Dormitory\EC.Framework.Service.Entities\obj\Debug\EC.Framework.Service.Entities.dll
+C:\Users\Thameem\Desktop\Sil Dormitory\Sil Dormitory\EC.Framework.Service.Entities\obj\Debug\EC.Framework.Service.Entities.pdb
+C:\Users\Thameem\Desktop\Sil Dormitory1\Sil Dormitory\EC.Framework.Service.Entities\bin\Debug\EC.Framework.Service.Entities.dll
+C:\Users\Thameem\Desktop\Sil Dormitory1\Sil Dormitory\EC.Framework.Service.Entities\bin\Debug\EC.Framework.Service.Entities.pdb
+C:\Users\Thameem\Desktop\Sil Dormitory1\Sil Dormitory\EC.Framework.Service.Entities\obj\Debug\EC.Framework.Service.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Thameem\Desktop\Sil Dormitory1\Sil Dormitory\EC.Framework.Service.Entities\obj\Debug\EC.Framework.Service.Entities.dll
+C:\Users\Thameem\Desktop\Sil Dormitory1\Sil Dormitory\EC.Framework.Service.Entities\obj\Debug\EC.Framework.Service.Entities.pdb
+E:\ECGroupProjects\Sil Dormitory\Sil Dormitory\EC.Framework.Service.Entities\obj\Debug\EC.Framework.Service.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Thameem\Desktop\Sil Dormitory\EC.Framework.Service.Entities\bin\Debug\EC.Framework.Service.Entities.dll
+C:\Users\Thameem\Desktop\Sil Dormitory\EC.Framework.Service.Entities\bin\Debug\EC.Framework.Service.Entities.pdb
+C:\Users\Thameem\Desktop\Sil Dormitory\EC.Framework.Service.Entities\obj\Debug\EC.Framework.Service.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Thameem\Desktop\Sil Dormitory\EC.Framework.Service.Entities\obj\Debug\EC.Framework.Service.Entities.dll
+C:\Users\Thameem\Desktop\Sil Dormitory\EC.Framework.Service.Entities\obj\Debug\EC.Framework.Service.Entities.pdb
