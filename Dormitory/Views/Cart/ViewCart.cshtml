@@ -25,14 +25,15 @@
         @{ decimal TotalAmount = 0; }
         @foreach (var item in Model.CartDetails)
         {
-          var TotalRent = item.RoomRent + item.Food;
+          var Food = item.Occupancy * item.Food;
+          var TotalRent = item.RoomRent + Food;
           TotalAmount += TotalRent;
           <tr data-cartdetailid="@item.CartDetailID">
             <td class="col-xs-2 ">@item.RoomNo</td>
             <td class="col-xs-2 ">@item.Date.ToString("MM/dd/yyyy")</td>
             <td class="col-xs-2 ">@item.RoomRent</td>
             <td class="col-xs-2 ">@item.Occupancy</td>
-            <td class="col-xs-2 ">@item.Food</td>
+            <td class="col-xs-2 ">@Food</td>
             <td class="col-xs-2 ">@TotalRent</td>
             <td class="text-center text" ><a title="Click here to remove the date from cart." class="text-danger" data-cartdetailid="@item.CartDetailID" href="javascript:alert('test')" ><i class="fa fa-trash"></i></a> </td>
           </tr>

@@ -29,20 +29,21 @@
 
     @{ decimal TotalAmount = 0; }
     @foreach (var item in Model.Booking.RoomBookingDetails)
-      {
-        var TotalRent = item.RoomRent + item.Food;
-        TotalAmount += TotalRent;
+    {
+      var Food = item.Occupancy * item.Food;
+      var TotalRent = item.RoomRent + Food;
+      TotalAmount += TotalRent;
       <tr>
         <td>@item.RoomNo</td>
         <td>@item.Date.ToString("MM/dd/yyyy")</td>
         <td>@item.RoomRent</td>
         <td>@item.Occupancy</td>
-        <td>@item.Food</td>
+        <td>@Food</td>
         <td>@TotalRent</td>
       </tr>
-      
-      
-      }
+
+
+    }
     <tr>
       <td class="text-right" colspan="5"><b>Total:</b></td>
       <td><b>@TotalAmount</b></td>
